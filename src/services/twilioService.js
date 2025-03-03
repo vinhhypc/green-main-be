@@ -1,5 +1,5 @@
 const twilio = require("twilio");
-const { accountSid, authToken, phoneNumber } = require("../../config/env");
+const { accountSid, authToken, phoneNumber } = require("../config/env");
 
 const client = twilio(accountSid, authToken);
 

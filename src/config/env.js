@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 require("dotenv").config();
 
 module.exports = {
@@ -5,5 +6,8 @@ module.exports = {
   accountSid: process.env.TWILIO_ACCOUNT_SID,
   authToken: process.env.TWILIO_AUTH_TOKEN,
   phoneNumber: process.env.TWILIO_PHONE_NUMBER,
-  port: process.env.PORT || 5000,
+  port: process.env.PORT,
+  redisHost: process.env.REDIS_HOST,
+  redisPort: process.env.REDIS_PORT,
+  redisPassword: process.env.REDIS_PASSWORD,
 };

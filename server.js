@@ -2,12 +2,12 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const routes = require("./src/routes");
-const connectDB = require("./config/db");
+const connectDB = require("./src/config/db");
 
 const app = express();
 app.use(cors());
 
-const { port } = require("./config/env");
+const { port } = require("./src/config/env");
 
 // connectDB();
 
