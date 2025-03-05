@@ -1,8 +1,5 @@
-const express = require("express");
-const otpRoutes = require("./otpRoutes");
+import { Router } from 'express';
 
-const router = express.Router();
-// Định nghĩa tất cả routes
-router.use("/otp", otpRoutes); // /api/otp/
+const router = Router();
 
-module.exports = router;
+export default router;

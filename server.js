@@ -1,22 +1,20 @@
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
-const routes = require("./src/routes");
-const connectDB = require("./src/config/db");
+import express, { json } from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import routes from './src/routes';
+dotenv.config();
 
 const app = express();
 app.use(cors());
 
-const { port } = require("./src/config/env");
+import { port } from './src/configs/env';
 
-// connectDB();
+app.use(json());
 
-app.use(express.json());
+app.use('/api', routes);
 
-app.use("/api", routes);
-
-app.get("/", (req, res) => {
-  res.send("Hello MongoDB!");
+app.get('/', (req, res) => {
+  res.send('Hello MongoDB!');
 });
 
 app.listen(port, () => {
