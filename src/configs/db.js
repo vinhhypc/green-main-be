@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { connect } from 'mongoose';
-import { mongoURI } from './env';
+import { mongoURI } from './env.js';
 
 const connectDB = async () => {
   try {

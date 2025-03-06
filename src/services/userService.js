@@ -1,5 +1,5 @@
-import User from '@/models/User';
-import connectDB from '@/configs/connectDB';
+import User from '../models/User.js';
+import connectDB from '../configs/db.js';
 
 export async function saveUserToDB(userInfo) {
   await connectDB();

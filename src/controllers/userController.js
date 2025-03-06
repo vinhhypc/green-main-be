@@ -1,4 +1,4 @@
-import { saveUserToDB, getUserById } from '@/services/userService';
+import { saveUserToDB, getUserById } from '../services/userService.js';
 
 export async function handleUserLogin(req, res) {
   if (req.method !== 'POST')
